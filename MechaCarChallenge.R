@@ -10,14 +10,29 @@ mecha_car <- read.csv('MechaCar_mpg.csv')
 head(mecha_car)
 
 #generate multiple linear regression model
-summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_car))
+lm <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_car)
 
-#look at variables with significant relationship with mpg:
-ggplot(data = mecha_car, aes(x=vehicle_length, y= mpg)) + geom_point()
-ggplot(data = mecha_car, aes(x=ground_clearance, y= mpg)) + geom_point()
+summary(lm)
 
 
 # Deliverable 2. Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots
+
+suspension_coil  <- read.csv('Suspension_Coil.csv',check.names = F,stringsAsFactors = F)
+
+head(suspension_coil)
+
+suspension_coil <- as_tibble(suspension_coil)
+
+#get summary statistics for coil PSI (pounds per square inch)
+total_summary <- suspension_coil %>% summarize(Mean=mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI)) 
+
+#get summary of PSI by manufacturing lot
+
+lot_summary <- suspension_coil %>% group_by(Manufacturing_Lot) %>%summarize(Mean=mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI)) 
+
+
+
+
 
 # Deliverable 3. Run t-tests to determine if the manufacturing lots are statistically different from the mean population
 
