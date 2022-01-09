@@ -3,8 +3,7 @@
 ## Linear Regression to Predict MPG
 
 Below is a screen shot of the output form R's lm() function: 
-![multiple_linear_regression_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis
-/blob/main/images/multiple_linear_regression_screenshot.png)
+![multiple_linear_regression_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/multiple_linear_regression_screenshot.png)
 
 Vehicle length and ground clearance provide a non-random amount of variance to the mpg (miles per gallon) values in the dataset. The slope of the linear model is not zero. Under 'value' in the output, the vehicle_length cofficient is equal to -6.559 and the ground_clearance coefficient is equal to 6.551. These coeficients translate to the model's slope. 
 
