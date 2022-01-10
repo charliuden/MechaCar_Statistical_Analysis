@@ -11,8 +11,16 @@ The R-squared value of this model is 0.7149, indicating that it does predict mpg
 
 ## Summary Statistics on Suspension Coils
 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. The current manufacturing data meet this design specification for manufacturing lots in total but not each lot individually. Across all manufacturign lots, the variance is 62.3 pounds per square inch. When the data is grouped by manufactuing lot, lots 1 and 2 fall well withing the suspension limits, but at 170 pounds per square inch, lot 3 exceeds the variance limit. 
 
 ![total_summary_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/total_summary_screenshot.png)
 
 ![lot_summary_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/lot_summary_screenshot.png)
+
+## T-Tests on Suspension Coils
+
+A one sided t-test gives a p-value of 0.06, indicating that the PSI across all manufacturing lots is not statistically different from the population mean of 1,500 pounds per square inch. If each lot is compared to the populaiton mean separately, we see that only lot 3 has a p-value below 0.05. The mean PSI from lot 3 is significanly different from the populaiton mean. 
+
+![one-sided-t-test_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/one-sided-t-test_screenshot.png)
+
+![lot3-t-test_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/two-sided-t-test_screenshot.png)
