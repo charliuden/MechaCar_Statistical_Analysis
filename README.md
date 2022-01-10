@@ -24,7 +24,7 @@ A one-sided t-test gives a p-value of 0.06, indicating that the PSI across all m
 ![one-sided-t-test_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/one-sided-t-test_screenshot.png)
 
 Below are the results of a t-test on lot 3. 
-![lot3-t-test_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/two-sided-t-test_screenshot.png)
+![lot3-t-test_screenshot.png](https://github.com/charliuden/MechaCar_Statistical_Analysis/blob/main/images/lot3-t-test_screenshot.png)
 
 ## Study Design: MechaCar vs Competition
 
@@ -40,6 +40,7 @@ How does MechaCar's fuel efficiency compare with its competitors and can we use 
 To answer these questions, we first need to check that there is a relationship between the cost of a car and its fuel efficiency. A linear regression model will help us find this relationship, with the dependant variable being car cost and fuel efficiency being the independent variable.
 
 H0 : The slope of the linear model is zero, or m = 0
+
 Ha : The slope of the linear model is not zero, or m ≠ 0
 
 R's lm() function would allow us to build a linear model and find the slope and R-squared value. If the slope is greater is not 0 then we would reject the null hypothesis and say that there is a relationship between fuel efficiency and car cost. 
